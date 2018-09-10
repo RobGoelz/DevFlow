@@ -90,6 +90,14 @@ function addMenu(callingFromCase) {
           .addItem('Demo what\'s new?', 'tellUserNotReady')
           .addToUi();
         break;
+        case "startSidebarExample": //same as start but setup to allow differences if required
+          SpreadsheetApp.getUi().createAddonMenu()
+            .addItem('Restart workflow', 'restartWorkflow')
+            .addSeparator()
+            .addItem('Simulate blue run button click', 'showGoogleSidebarExampleSidebar')//TODO: remove
+            .addItem('Show current demo\'s example dialog', 'showGoogleSidebarExampleDialog')
+            .addToUi();
+          break;
       default:
         SpreadsheetApp.getUi().createAddonMenu()
         .addItem('Restart workflow', 'restartWorkflow')
